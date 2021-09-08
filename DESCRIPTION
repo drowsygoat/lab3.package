@@ -3,6 +3,5 @@ Type: Package
 Title: Estimates Euclidean distance & implements Djikstra's algorithm.
 Version: 1.0
 Date: 2021-09-07
-Author: person("Lech", "Kaczmarczyk", email = "lech.kaczmarczyk@liu.se", role = "aut") 
-person("Elis", "Carlberg Larsson", email = "elis.carlberg.larsson@liu.se", role = "aut")
+Author: person("Lech", "Kaczmarczyk", email = "lech.kaczmarczyk@liu.se", role = "aut") person("Elis", "Carlberg Larsson", email = "elis.carlberg.larsson@liu.se", role = "aut")
 Description: Solutions to Lab 3 in Advanced R programming (73A94) at Linköping University fall 2021. The package estimates Euclidean distance and implements Djikstra's algorithm to find the shortest path between two nodes. 
