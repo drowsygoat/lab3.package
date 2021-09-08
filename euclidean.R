@@ -1,9 +1,10 @@
-euclidean <- function(x, y) {
-  if (!(is.integer(x) | is.numeric(x)) & length(x) != 1L) {
-    stop("x is not a numeric integer or scalar.")
-  }
-  if (!(is.integer(y) | is.numeric(y)) | length(y) != 1L) {
-    stop("y is not a numeric integer or scalar.")
-  }
-  sqrt(sum((x - y) ^ 2)) # sth wrong here?
+# function to calculate greatest common divisor of two numbers (x and y) using the Euclidean algorithm based on psudocode from Wikipedia
+euclidean <- function(x, y){
+        stopifnot((is.numeric(x) | is.integer(x)) & (is.numeric(y) | is.integer(y)))
+        while (y !=0 ){
+                z <- y
+                y <- x %% y
+                x <- z
+        }
+        return(x)
 }
