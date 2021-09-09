@@ -1,5 +1,7 @@
-
-# dijkstra function returning the shortest distance from a starting vertex of the graph to every other vertex
+#' Dijkstra's algorithm returning the shortest distance from a starting vertex of the graph to every other vertex
+#' @param graph  Should be a data.frame with three variables, v1,v2 and w.
+#' @param init_node Start node.
+#' @source \url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
 #' @export
 dijkstra <- function(graph, init_node){
         # input validation

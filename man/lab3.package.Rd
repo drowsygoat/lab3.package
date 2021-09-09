@@ -5,7 +5,7 @@
 \alias{lab3.package}
 \title{LAB 3 PACKAGE}
 \description{
-Solutions to Lab 3 in Advanced R programming (73A94) at Linkoping University fall 2021. The package estimates Euclidean distance and implements Djikstra's algorithm to find the shortest path between two nodes.
+Solutions to Lab 3 in Advanced R programming (73A94) at Linkoping University fall 2021. The package estimates Euclidean distance and implements Dijkstra's algorithm to find the shortest path between two nodes.
 }
 \author{
 Lech Kaczmarczyk \email{lech.kaczmarczyk@liu.se}
