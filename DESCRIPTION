@@ -12,3 +12,6 @@ LazyData: true
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Maintainer: Lech Kaczmarczyk <lech.kaczmarczyk@gmail.com>
+        Elis Carlberg Larsson <elis.carlberg.larsson@liu.se>
+License: LGPL (>= 3)
