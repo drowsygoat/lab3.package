@@ -39,7 +39,7 @@ Lech Kaczmarczyk and Elis Carlberg Larsson
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-dijkstra(wikigraph,3)
+dijkstra(wiki_graph,3)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

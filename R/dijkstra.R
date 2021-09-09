@@ -1,4 +1,6 @@
+
 # dijkstra function returning the shortest distance from a starting vertex of the graph to every other vertex
+#' @export
 dijkstra <- function(graph, init_node){
         # input validation
         stopifnot("Graph must be provided as a dataframe with 3 columns named 'v1', 'v2', and 'w'" = is.data.frame(graph) & colnames(graph) == c("v1", "v2", "w"))
