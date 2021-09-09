@@ -3,4 +3,4 @@ cache: packages
 install:
   - Rscript -e 'install.packages(c("devtools","roxygen2","testthat"));devtools::install_deps(".")'
 script:
-  - Rscript -e 'devtools::check("lab3.package")'
+  - Rscript -e 'devtools::check(".")'
