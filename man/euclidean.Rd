@@ -39,22 +39,7 @@ No notes
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (x, y)
-{
-    stopifnot((is.numeric(x) | is.integer(x)) & (is.numeric(y) |
-        is.integer(y)))
-    while (y != 0) {
-        z <- y
-        y <- x\%\%y
-        x <- z
-    }
-    return(x)
-  }
+euclidean(100,1000)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

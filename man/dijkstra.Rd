@@ -39,53 +39,7 @@ Lech Kaczmarczyk and Elis Carlberg Larsson
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (graph, init_node)
-{
-    stopifnot(`Graph must be provided as a dataframe with 3 columns named 'v1', 'v2', and 'w'` = is.data.frame(graph) &
-        colnames(graph) == c("v1", "v2", "w"))
-    stopifnot(`Initial vertex is not present the provided graph` = init_node \%in\%
-        graph[, 1])
-    distances <- rep(Inf, length(unique(graph[, 1])))
-    visited <- rep(FALSE, length(unique(graph[, 1])))
-    distances[init_node] <- 0
-    repeat {
-        shortest_distance <- Inf
-        shortest_index <- -1
-        for (i in seq_along(distances)) {
-            if (distances[i] < shortest_distance & !visited[i]) {
-                shortest_distance <- distances[i]
-                shortest_index <- i
-            }
-        }
-        if (shortest_index > 0) {
-            message(" Visiting vertex ", shortest_index, " with current distance ",
-                shortest_distance, "\n")
-        }
-        if (shortest_index == -1) {
-            message("Done")
-            return(distances)
-        }
-        for (i in 1:nrow(graph[which(graph[, 1] == shortest_index),
-            ])) {
-            neigh_vert_ind <- graph[which(graph[, 1] == shortest_index),
-                ][i, 2]
-            if (graph[which(graph[, 1] == shortest_index), ][i,
-                3] != 0 & distances[neigh_vert_ind] > distances[shortest_index] +
-                graph[which(graph[, 1] == shortest_index), ][i,
-                  3]) {
-                distances[neigh_vert_ind] <- distances[shortest_index] +
-                  graph[which(graph[, 1] == shortest_index),
-                    ][i, 3]
-            }
-        }
-        visited[shortest_index] <- TRUE
-    }
-  }
+dijkstra(wikigraph,3)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
