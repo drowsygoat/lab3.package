@@ -5,4 +5,5 @@
 #' @author Lech Kaczmarczyk \email{lech.kaczmarczyk@liu.se}
 #' @author Elis Carlberg Larsson \email{elis.carlberg.larsson@liu.se}
 #' @name lab3.package
+#' @import usethis
 NULL

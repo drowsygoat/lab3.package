@@ -5,9 +5,7 @@
 #' @name wiki_graph
 #' @docType data
 #' @keywords datasets
-#' @source \url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
-#' @export
-
+#' @source \url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 
 wiki_graph <- data.frame(
   v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
