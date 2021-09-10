@@ -5,5 +5,5 @@
 #'   \item{v2}{Edges}
 #'   \item{w}{Weight of the edges}
 #'   }
-#'@source \url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
+#'@source \url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 "wiki_graph"
