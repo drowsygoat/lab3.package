@@ -1,5 +1,5 @@
 #' Dijkstra's algorithm returning the shortest distance from a starting vertex of the graph to every other vertex
-#' @param graph  Should be a data.frame with three variables, v1,v2 and w.
+#' @param graph Should be a data.frame with three variables, v1,v2 and w.
 #' @param init_node Start node.
 #' @source \url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 #' @export
@@ -10,23 +10,23 @@ dijkstra <- function(graph, init_node){
         # distances from the start vertex to all other verices
         distances <-  rep(Inf, length(unique(graph[ , 1])))
         # was a vertex was already visited
-        visited <-  rep(FALSE, length(unique(graph[ , 1])))
+        visited_vertices <-  rep(FALSE, length(unique(graph[ , 1])))
         # set the distance to the start vertex to 0
         distances[init_node] <- 0
-        # While there are nodes left to visit...
+        # main loop
         repeat{
                 shortest_distance <- Inf
-                shortest_index <- -1
+                shortest_index <- NULL
                 for(i in seq_along(distances)) {
-                        if(distances[i] < shortest_distance & !visited[i]){
+                        if(distances[i] < shortest_distance & !visited_vertices[i]){
                                 shortest_distance <- distances[i]
                                 shortest_index <- i
                         }
                 }
-                if (shortest_index > 0){
+                if (!is.null(shortest_index)){
                         message(" Visiting vertex ", shortest_index, " with current distance ", shortest_distance, "\n")
                 }
-                if(shortest_index == -1) { # finish if no more vertices to visit and return the vector of distances
+                if(is.null(shortest_index)) { # finish if no more vertices to visit and return the vector of distances
                         message("Done")
                         return(distances)
                 }
@@ -38,6 +38,6 @@ dijkstra <- function(graph, init_node){
                                 distances[neigh_vert_ind] <- distances[shortest_index] + graph[which(graph[ ,1] == shortest_index), ][i, 3]
                         }
                 }
-                visited[shortest_index] <- TRUE
+                visited_vertices[shortest_index] <- TRUE
         }
 }
