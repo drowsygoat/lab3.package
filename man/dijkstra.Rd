@@ -4,7 +4,7 @@
 \alias{dijkstra}
 \title{Dijkstra's algorithm returning the shortest distance from a starting vertex of the graph to every other vertex}
 \source{
-
+\url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 }
 \usage{
 dijkstra(graph, init_node)

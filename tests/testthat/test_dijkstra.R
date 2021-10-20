@@ -13,7 +13,7 @@ test_that("outputs are correct in the Dijkstra algorithm.", {
 
 test_that("Error messages are returned for erronous input in the Dijkstra algorithm.", {
         wiki_wrong_graph <- wiki_graph
-        names(wiki_wrong_graph) <- c("v1, v3, w")
+        names(wiki_wrong_graph) <- c("v1", "v3", "w")
         expect_error(dijkstra(wiki_wrong_graph, 3))
         wiki_wrong_graph <- wiki_graph[1:2]
         expect_error(dijkstra(wiki_wrong_graph, 3))
